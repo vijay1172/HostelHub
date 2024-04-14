@@ -23,7 +23,7 @@
 
 .NavbarItems img {
     width: 7%;
-    height: auto; /* Adjusted height for better responsiveness */
+    height: auto; 
     border-radius: 50%;
 }
 
@@ -62,7 +62,7 @@
 
 .menu-icons {
     display: none;
-    cursor: pointer; /* Add cursor pointer for better usability */
+    cursor: pointer; 
 }
 
 @media screen and (max-width: 768px) {
@@ -85,7 +85,7 @@
     }
 
     .nav-menu.active {
-        max-height: 300px; /* Adjust as needed */
+        max-height: 300px; 
     }
 
     .nav-links {

@@ -5,21 +5,14 @@
     background: url('back2.avif') no-repeat 100% 100%;
     background-size: cover;
     padding: 40px 40px;
-    /* margin-top: 100px; */
-
+    
   }
   
   .extra-items{
     align-items: start;
 }
 
-/* .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-top: 100px;
-    margin-bottom: -5.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: var(--bs-heading-color);
-} */
+
 
 .head{
     background: lightgreen;
@@ -134,7 +127,7 @@
     align-items: baseline;
 }
 .tables {
-    width: 100%; /* Ensure table fills its container */
-    font-size: 14px; /* Decrease font size for better readability on smaller screens */
+    width: 100%; 
+    font-size: 14px; 
 }
 }

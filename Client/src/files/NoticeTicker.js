@@ -1,5 +1,5 @@
 import React from 'react';
-import './NoticeTicker.css'; // Import your CSS file for styling
+import './NoticeTicker.css';
 
 const NoticeTicker = ({ title, notices }) => {
   return (

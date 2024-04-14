@@ -58,7 +58,7 @@ function Complaints() {
             setAlertType('error');
         }
 
-        // Automatically hide the alert after 3 seconds
+        
         setTimeout(() => {
             setAlertMessage('');
         }, 3000);

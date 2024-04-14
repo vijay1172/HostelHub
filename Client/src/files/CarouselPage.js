@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import ganga1 from "../components/ganga1.jpg";
 import brahm from "../components/brahm.jpeg";
-// import hostel from "../components/hostel.jpg";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CarouselP.css';
 function CarouselComponent() {

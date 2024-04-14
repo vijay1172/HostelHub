@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Main container */
+
 .main {
   display: flex;
   justify-content: center;
@@ -16,13 +16,13 @@
   background-size: cover;
 }
 
-/* Form wrapper */
+
 .wrapper {
   position: relative;
   width: 550px;
   height: 600px;
   background: transparent;
-  /* background-image: url("back1.jpg"); */
+  
   border: 2px solid rgba(255, 255, 255, .5);
   border-radius: 20px;
   backdrop-filter: blur(10px);
@@ -31,26 +31,26 @@
   align-items: center;
 }
 
-/* Form box */
+
 .wrapper .form-box {
   width: 100%;
   padding: 40px;
-  transition: transform 0.3s; /* Add transition for smooth animation */
+  transition: transform 0.3s; 
 }
 
-/* Hover effect on form box */
+
 .wrapper .form-box:hover {
-  transform: scale(1.05); /* Increase size on hover */
+  transform: scale(1.05); 
 }
 
-/* Form heading */
+
 .form-box h2 {
   font-size: 2em;
   text-align: center;
   color: cadetblue;
 }
 
-/* Input box */
+
 .input-box {
   position: relative;
   width: 100%;
@@ -58,7 +58,6 @@
   border-bottom: 2px solid rgb(198, 184, 184);
 }
 
-/* Label inside input box */
 .input-box label {
   position: absolute;
   top: 50%;
@@ -68,7 +67,6 @@
   transition: .5s;
 }
 
-/* Move label up on input focus or input value present */
 .input-box input:focus ~ label,
 .input-box input:valid ~ label {
   top: -5px;
@@ -85,7 +83,7 @@
   display: block;
   width: 30%;
   padding: 10px 10px;
-  margin: 20px auto 0; /* Updated margin to center horizontally and add space above */
+  margin: 20px auto 0;
   border-radius: 10px;
   background-color: cadetblue;
   color: #e66688;

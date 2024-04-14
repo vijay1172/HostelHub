@@ -7,7 +7,7 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  width: 100%; /* Adjusted width to fill the viewport */
+  width: 100%; 
 }
 
 header {
@@ -15,7 +15,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 5%; /* Adjusted padding for smaller screens */
+  padding: 20px 5%; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,15 +23,15 @@ header {
 }
 
 .form-box {
-  padding: 20px 5%; /* Adjusted padding for smaller screens */
+  padding: 20px 5%; 
   border-radius: 8px;
-  margin-top: 10vh; /* Adjusted margin for smaller screens */
+  margin-top: 10vh; 
 }
 
 .input-box {
   margin-bottom: 20px;
   position: relative;
-  transition: all 0.3s ease; /* Add transition for all properties */
+  transition: all 0.3s ease;
 }
 
 .input-box input {
@@ -41,29 +41,29 @@ header {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 16px;
-  transition: all 0.3s ease; /* Add transition for all properties */
+  transition: all 0.3s ease; 
 }
 
-/* Add transition for label position */
+
 .input-box label {
   position: absolute;
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
   pointer-events: none;
-  transition: all 0.3s ease; /* Add transition for all properties */
+  transition: all 0.3s ease;
 }
 
 .input-box input:focus ~ label,
 .input-box input:valid ~ label {
   top: -5px;
-  font-size: 12px; /* Adjust font size when label moves up */
+  font-size: 12px; 
 }
 
 .wrapper {
   position: relative;
-  width: 90%; /* Adjusted width for smaller screens */
-  max-width: 1200px; /* Added maximum width for larger screens */
+  width: 90%; 
+  max-width: 1200px; 
   height: auto;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, .5);
@@ -72,7 +72,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 12vh; /* Adjusted margin for smaller screens */
+  margin-top: 12vh; 
 }
 
 .wrapper .form-box {
@@ -122,30 +122,30 @@ header {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -100px; /* Initially set below the viewport */
+  bottom: -100px; 
   z-index: 1000;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   text-align: center;
-  animation: slideInUp 0.5s forwards, fadeOut 3s forwards 2s; /* Apply animations */
+  animation: slideInUp 0.5s forwards, fadeOut 3s forwards 2s; 
 }
 
 @keyframes slideInUp {
   from {
-    bottom: -100px; /* Start position below the viewport */
+    bottom: -100px; 
   }
   to {
-    bottom: 20px; /* End position 20px above the bottom */
+    bottom: 20px; 
   }
 }
 
 @keyframes fadeOut {
   from {
-    opacity: 1; /* Start opacity fully visible */
+    opacity: 1; 
   }
   to {
-    opacity: 0; /* End opacity fully transparent */
+    opacity: 0; 
   }
 }
 
@@ -181,21 +181,20 @@ header {
   width: 100%;
   padding: 10px;
   border: none;
-  border-bottom: 2px solid black; /* Adding bottom border */
+  border-bottom: 2px solid black; 
   background: transparent;
   outline: none;
-  transition: border-bottom 0.3s ease; /* Adding transition for bottom border */
-}
+  transition: border-bottom 0.3s ease; }
 
 .issue input:focus {
-  border-bottom-color: #ddd; /* Changing bottom border color on focus */
+  border-bottom-color: #ddd; 
 }
 
-/* Add transition for label position */
+
 .issue input:focus ~ label,
 .issue input:valid ~ label {
   top: -5px;
-  font-size: 12px; /* Adjust font size when label moves up */
+  font-size: 12px;
 }
 
 .btn {
@@ -203,14 +202,14 @@ header {
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #007bff; /* Blue color for the button */
+  background-color: #007bff; 
   color: white;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Add transition effect */
+  transition: background-color 0.3s ease; 
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Darker shade of blue on hover */
+  background-color: #0056b3; 
 }
