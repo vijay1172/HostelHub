@@ -124,7 +124,7 @@ function Complaints() {
                                 <span className="icon"></span>
                                 <input
                                     type="text"
-                                    maxLength={100}
+                                    maxLength={60}
                                     name="problem"
                                     value={formData.problem}
                                     onChange={handleChange}

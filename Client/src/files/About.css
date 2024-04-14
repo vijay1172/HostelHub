@@ -1,4 +1,4 @@
-.section-white{
+.section-white {
     background: #fff;
     padding: 120px 0;
     background: url("back2.avif") no-repeat;
@@ -6,66 +6,65 @@
     height: auto;
     width: 100%;
 }
-.section-title{
+
+.section-title {
     color: black;
 }
-.text-center{
+
+.text-center {
     margin-top: 2%;
 }
 
-.team-item{
+.team-item {
     background: #f4f5f6;
     text-align: center;
     margin: 9px 0;
     padding: 50px 20px 40px 20px;
-    border-radius: 8px 8px;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
+    border-radius: 8px;
     width: 100%;
     max-width: 300px;
     height: auto;
+    transition: all 0.5s ease-in-out; /* Apply transition */
 }
-.team-item:hover{
-    background: #3956de;
-    color: white; 
 
+.team-item:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
 }
-.team-item h3{
+
+.team-item:not(:hover) {
+    opacity: 0.5; /* Reduce opacity for other cards */
+}
+
+.team-item h3 {
     margin: 20px 0 1px 0 !important;
     color: #454545;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    
+    transition: all 0.25s ease-in-out; /* Added transition */
 }
-.section-subtitle{
-    white-space: pre-line;
 
+.section-subtitle {
+    white-space: pre-line;
 }
-.team-item hover h3{
-    color: #ddd; 
-}
-.team-info{
+
+.team-info {
     display: block;
     margin-bottom: 5px;
 }
-.team-info p{
-    color: #acacac;
-    font-style:italic;
 
+.team-info p {
+    color: #acacac;
+    font-style: italic;
 }
-.team-info::after{
+
+.team-info::after {
     background: #008aff;
     background: -webkit-linear-gradient(135deg, #6B02FF 0%, #985BEF 100%);
     background: -o-linear-gradient(135deg, #6B02FF 0%, #985BEF 100%);
     background: -moz-linear-gradient(135deg, #6B02FF 0%, #985BEF 100%);
     background: linear-gradient(135deg, #6B02FF 0%, #985BEF 100%);
-
     display: inline-block;
     vertical-align: middle;
     content: '';
@@ -73,28 +72,24 @@
     height: 3px;
     margin-top: -20px;
 }
-.team-img{
-    max-width: 140px;
-    padding: 6px 6px ;
-    background-color: #dedede;
-    -webkit-border-radius: 50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
 
+.team-img {
+    max-width: 140px;
+    padding: 6px 6px;
+    background-color: #dedede;
+    border-radius: 50%;
 }
-ul.team-icon{
+
+ul.team-icon {
     margin-top: 20px;
 }
-ul.team-icon li{
+
+ul.team-icon li {
     display: inline-block;
     margin: 0 3px;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
 }
-ul.team-icon li a{
+
+ul.team-icon li a {
     margin: 0;
     display: inline-block;
     padding: 8px 8px;
@@ -104,23 +99,17 @@ ul.team-icon li a{
     background-color: #fff;
     border-radius: 50%;
     color: #fff;
-
 }
-ul.team-icon li a.gmail{
+
+ul.team-icon li a.gmail {
     background-color: #c71610;
-
 }
-ul.team-icon li a.LinkedIn{
+
+ul.team-icon li a.LinkedIn {
     background-color: #4a72c3;
-    
 }
 
 .team-icon li a:hover {
     color: #dedede;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-
+    transition: all 0.25s ease-in-out; /* Added transition */
 }
