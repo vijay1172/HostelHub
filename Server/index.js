@@ -14,21 +14,6 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("MongoDB Connection Error:", err));
 
-app.post("/warden", async (req, res) => {
-  const { username, password } = req.body;
-  console.log(req.body)
-  try {
-    const admin = await mongoose.connection.db.collection("admindetails").findOne({ username, password });
-    
-    if (!admin) {
-      return res.status(401).json({ error: "Invalid credentials" });
-    }
-
-    res.redirect("/issues");
-  } catch (error) {
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-});
 
 app.post("/complaints", async (req, res) => {
   try {
@@ -67,44 +52,6 @@ app.post("/complaints", async (req, res) => {
   }
 });
 
-app.get("/complaints", async (req, res) => {
-  try {
-    const complaints = await User.find({});
-    res.status(200).json(complaints);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-app.get("/issues", async (req, res) => {
-    try {
-      // Fetch complaints data from the database
-      const complaints = await User.find({});
-  
-      // Send the complaints data as a response
-      res.status(200).json(complaints);
-    } catch (error) {
-      // Handle errors
-      res.status(500).json({ error: error.message });
-    }
-  });
-
-app.delete("/complaints/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    
-    const complaint = await User.findById(id);
-    if (!complaint) {
-      return res.status(404).json({ error: "Complaint not found" });
-    }
-
-    await User.findByIdAndDelete(id);
-
-    res.status(200).json({ message: "Complaint deleted successfully" });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
 
 const PORT = 8000;
 app.listen(PORT, () => {
