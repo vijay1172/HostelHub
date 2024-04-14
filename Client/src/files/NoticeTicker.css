@@ -1,10 +1,12 @@
 .notice-ticker-container {
   width: 100%;
+  
   display: flex;
   justify-content: space-between;
 }
 
 .notice-section {
+  
   width: 48%;
 }
 

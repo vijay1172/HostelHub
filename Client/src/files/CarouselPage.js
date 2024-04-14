@@ -1,46 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import ganga1 from "../components/ganga1.jpg";
 import brahm from "../components/brahm.jpeg";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CarouselP.css';
+
 function CarouselComponent() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className="carousel-container">
       <Carousel>
         <Carousel.Item>
           <img
-            className='b'
+            className='carousel-image'
             src={ganga1}
             alt="First slide"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className='b'
+            className='carousel-image'
             src={brahm}
             alt="Second slide"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className='b'
+            className='carousel-image'
             src={ganga1}
             alt="Third slide"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>

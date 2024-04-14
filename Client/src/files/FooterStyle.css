@@ -21,6 +21,10 @@
     padding: 20px;
 
 }
+ul.team-icon li a.whatsapp{
+    background-color: #09500f;
+    
+}
 .contact-us:after {
     content: "";
     display: table;
@@ -28,7 +32,7 @@
 }
 .ab1{
     text-decoration: none;
-    color:rgb(169, 124, 212)
+    color:rgb(179, 39, 20)
 }
 .ab2{
     text-decoration: none;
@@ -37,7 +41,9 @@
 .ab1:hover {
     color: #ebad1d9f;
 }
-
+.cls{
+    gap: 2px;
+}
 .fot4{
     font-family: "Ubuntu", sans-serif;
 }
@@ -49,6 +55,6 @@
     .fot2,
     .fot3.contact-us {
         width: 100%;
-        margin-right: 0; 
-    }
+        margin-right:0;
+}
 }

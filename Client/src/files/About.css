@@ -1,9 +1,9 @@
 .section-white {
-    background: #fff;
+    background: #fff url("back2.avif") no-repeat;
+    background-size: cover; /* Cover the entire page */
+    background-attachment: fixed; /* Ensure the background covers the entire viewport */
     padding: 120px 0;
-    background: url("back2.avif") no-repeat;
-    background-size: cover;
-    height: auto;
+    height: 270vh; /* Set the height to 100% of the viewport height */
     width: 100%;
 }
 

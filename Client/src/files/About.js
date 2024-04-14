@@ -1,6 +1,6 @@
 import './About.css'
 function About(){
-    let message = "Learning to write programs stretches your mind, and helps you think better, creates a way of thinking about things that I think is helpful in all domains."
+    let message = "The team of HostelHub aims to render the issues faced by hostelers just through a single click"
     return(
         <div>
            <section className="section-white">
@@ -20,8 +20,10 @@ function About(){
                            <div className="team-info">
                             <p> Undergrad at NIT PATNA</p>
                            </div>
-                           <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                           </p>
+                           <p> <b>Backend Developers </b>
+                            <ul><li>Proficient in backend programming languages Node.js </li>
+                            <li>Skilled in database management systems including SQL,MongoDB,Redis with a solid understanding of database design and optimization.</li></ul>
+                           </p>
                            <ul className="team-icon">
                             <li className='item'><a href="https://gmail.com/" className="gmail">
                             <i className="fa-solid fa-envelope"></i>
@@ -41,8 +43,10 @@ function About(){
                            <div className="team-info">
                             <p> Undergrad at NIT PATNA</p>
                            </div>
-                           <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                           </p>
+                           <p> <b>Backend Developer</b>
+                            <ul><li>Developed backend services using node.js and next.js.</li>
+                            <li>Optimized database queries using MongoDB improve performance resulting in faster response times and enhanced user experience.</li></ul>
+                           </p>
                            <ul className="team-icon">
                             <li><a href="https://gmail.com/" className="gmail">
                             <i className="fa-solid fa-envelope"></i>
@@ -63,8 +67,11 @@ function About(){
                            <div className="team-info">
                             <p> Undergrad at NIT PATNA</p>
                            </div>
-                           <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                           </p>
+                           <p> <b>Frontend Developer</b><ul>
+                            <li>Proficient in HTML, CSS, and JavaScript</li>
+                             <li>Experience with modern frontend frameworks/libraries such as React.js, Bootstrap</li>
+                           </ul>
+                           </p>
                            <ul className="team-icon">
                             <li><a href="https://gmail.com/" className="gmail">
                             <i className="fa-solid fa-envelope"></i>
@@ -84,8 +91,11 @@ function About(){
                            <div className="team-info">
                             <p> Undergrad at NIT PATNA</p>
                            </div>
-                           <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                           </p>
+                           <p><b> Frontend Developer </b><ul>
+                            <li> Proficient in HTML, CSS, JavaScript, and react.js of web development principles.</li>
+                            <li>Experienced in building responsive websites using frameworks such as Bootstrap and Flexbox.</li>
+                            </ul>
+                           </p>
                            <ul className="team-icon">
                             <li><a href="https://gmail.com/" className="gmail">
                             <i className="fa-solid fa-envelope"></i>

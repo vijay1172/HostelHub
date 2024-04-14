@@ -1,0 +1,16 @@
+.notice-head h1{
+    font-size: 60px;
+}
+.scr{
+    overflow: auto;
+    height: 200px;
+}
+.notice-head{
+    /* margin-top: 10%; */
+    padding-top: 10%;
+
+}
+.home{
+    /* background: url("backk2.avif") no-repeat; */
+    background-color: rgb(128, 195, 186);
+}
