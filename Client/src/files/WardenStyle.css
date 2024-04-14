@@ -1,0 +1,100 @@
+/* Reset CSS */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: url('back4.jpg') no-repeat; */
+  background-image: url("../components/wardenbackground.jpg");
+  background-size: cover;
+}
+
+/* Form wrapper */
+.wrapper {
+  position: relative;
+  width: 550px;
+  height: 600px;
+  background: transparent;
+  /* background-image: url("back1.jpg"); */
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form box */
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+  transition: transform 0.3s; /* Add transition for smooth animation */
+}
+
+/* Hover effect on form box */
+.wrapper .form-box:hover {
+  transform: scale(1.05); /* Increase size on hover */
+}
+
+/* Form heading */
+.form-box h2 {
+  font-size: 2em;
+  text-align: center;
+  color: cadetblue;
+}
+
+/* Input box */
+.input-box {
+  position: relative;
+  width: 100%;
+  margin: 50px 0;
+  border-bottom: 2px solid rgb(198, 184, 184);
+}
+
+/* Label inside input box */
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: .5s;
+}
+
+/* Move label up on input focus or input value present */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+
+.input-box input {
+  width: calc(100% - 40px);
+}
+.input-box label{
+  color: aliceblue;
+}
+.login-btn {
+  display: block;
+  width: 30%;
+  padding: 10px 10px;
+  margin: 20px auto 0; /* Updated margin to center horizontally and add space above */
+  border-radius: 10px;
+  background-color: cadetblue;
+  color: #e66688;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+.login-btn:hover {
+  background-color: #4682b4;
+}
