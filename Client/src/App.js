@@ -10,7 +10,6 @@ import About from './files/About';
 import Issues from './files/issues';
 
 
-// Import the Issues component
 
 function App() {
   return (

@@ -1,9 +1,9 @@
 .carousel-caption {
-  display: none; /* Initially hide the caption */
+  display: none;
 }
 
 .carousel-caption.show {
-  display: block; /* Show the caption when the parent is hovered */
+  display: block; 
 }
 
 .carousel-caption:hover {
@@ -16,6 +16,6 @@
 
 @media (max-width: 768px) {
   .carousel-caption:hover {
-    width: 90%; /* Adjusted width for smaller screens */
+    width: 90%; 
   }
 }

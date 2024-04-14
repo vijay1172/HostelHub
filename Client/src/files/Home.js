@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS CSS
-import './HomeStyles.css'; // Import your component styles
+import 'aos/dist/aos.css'; 
+import './HomeStyles.css';
 import CarouselPage from './CarouselPage';
 import NoticeTicker from './NoticeTicker';
 import Gallery from './Gallery';
@@ -10,18 +10,18 @@ import Footer from './Footer';
 const Home = () => {
   useEffect(() => {
     AOS.init({
-      // Initialize AOS options if needed
+      
     });
-  }, []); // Run only once after component mounts
+  }, []); 
 
   const leftNotices = [
     { title: 'Hostelers are not allowed to takes the plates from mess to their rooms', link: 'https://example.com/notice1' },
-    // Add more notices as needed
+    
   ];
 
   const rightNotices = [
-    { title: 'Brahmaputra', link: 'https://example.com/event' },
-    // Add more notices as needed
+    { title: 'The mess bill of this month has been updated', link: 'https://example.com/event' },
+    
   ];
 
   return (
@@ -41,12 +41,12 @@ const Home = () => {
         </div>
       </div>
       <div className="home-sidebar" data-aos="fade-up">
-        {/* Sidebar content */}
+        
       </div>
       <div className="home-gallery" data-aos="fade-up">
         <Gallery />
       </div>
-      {/* Footer Section */}
+    
       <footer className="home-footer" data-aos="fade-up">
         <div className="contact-us">
           <Footer />

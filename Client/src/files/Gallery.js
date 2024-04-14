@@ -30,8 +30,8 @@ const Gallery = () => {
     <div className="gallery">
       <h2 className="gallery-heading">Gallery</h2>
       <div className="image-container">
-        {/* Add your gallery images here */}
-        {/* Example: */}
+        
+      
         <img
           ref={(el) => el && imagesRef.current.push(el)}
           data-src="\images\c1.jpg"
