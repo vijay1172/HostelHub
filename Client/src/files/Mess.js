@@ -6,7 +6,7 @@ function Mess(){
       <header>
         <div className="menu-bar">
           <div>
-          <h1 className='menu'>WEEKLY MENU AND MESS TIMINGS</h1></div>
+          <h1 className='menu'>WEEKLY MENU AND MESS TIMING</h1></div>
         </div>
       </header>
       <div className='pattern'>

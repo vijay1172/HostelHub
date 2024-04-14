@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+.contact-us {
+    overflow: hidden; 
+    background-color: #333;
+    color: #fff;
+    padding:20px;
+
+}
+.hostel{
+    font-family: "Ubuntu", sans-serif;
+}
+
+.fot1,
+.fot2,
+.fot3 {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5%;
+    box-sizing: border-box;
+    padding: 20px;
+
+}
+.contact-us:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.ab1{
+    text-decoration: none;
+    color:rgb(169, 124, 212)
+}
+.ab2{
+    text-decoration: none;
+    color: rgb(16, 235, 166);
+}
+.ab1:hover {
+    color: #ebad1d9f;
+}
+
+.fot4{
+    font-family: "Ubuntu", sans-serif;
+}
+.ab2:hover {
+    color: #b8eb1d9f; 
+}
+@media screen and (max-width: 768px) {
+    .fot1,
+    .fot2,
+    .fot3.contact-us {
+        width: 100%;
+        margin-right: 0; 
+    }
+}
