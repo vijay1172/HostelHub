@@ -7,6 +7,7 @@ import Mess from './files/Mess';
 import Complaints from './files/Complaints';
 import Warden from './files/Warden';
 import About from './files/About';
+import issues from './files/issues';
 
 
 // Import the Issues component
@@ -21,6 +22,7 @@ function App() {
       <Route path="/complaints" element={<Complaints/>}/>
       <Route path="/Warden" element ={<Warden/>} />
       <Route path="/About" element ={<About/>} />
+      <Route path="/issues" element ={<issues/>} />
       
       
      </Routes> 

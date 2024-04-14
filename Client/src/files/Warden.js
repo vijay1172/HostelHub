@@ -46,7 +46,7 @@ const Warden = () => {
               <input type="password" id="password" name="password" required />
               <label htmlFor="password">Password</label>
             </div>
-            <button type="submit">Login</button>
+            <button className="login-btn"type="submit">Login</button>
           </form>
         </div>
       </div>
