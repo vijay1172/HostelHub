@@ -33,7 +33,7 @@ const Home = () => {
         <h1>--Notice--</h1>
         <div className='scr'>
           <NoticeTicker
-            leftTitle="Brahmaputa"
+            leftTitle="Brahmaputra"
             leftNotices={leftNotices}
             rightTitle="Ganga"
             rightNotices={rightNotices}
