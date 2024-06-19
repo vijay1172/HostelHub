@@ -7,7 +7,7 @@ const Issues = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:8000/complaints')
+    fetch('http://localhost:5000/complaints')
       .then(response => response.json())
       .then(data => {
         console.log('Data received from backend:', data);
@@ -20,7 +20,7 @@ const Issues = () => {
 
   const handleCheckboxChange = async (complaintId) => {
     try {
-      const response = await fetch(`http://localhost:8000/complaints/${complaintId}`, {
+      const response = await fetch(`http://localhost:5000/complaints/${complaintId}`, {
         method: 'DELETE'
       });
 

@@ -22,7 +22,7 @@ function Complaints() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8000/complaints", {
+            const response = await fetch("http://localhost:5000/complaints", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
