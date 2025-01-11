@@ -20,7 +20,7 @@ const Issues = () => {
 
   const handleCheckboxChange = async (complaintId) => {
     try {
-      const response = await fetch(`http://localhost:5000/complaints/${complaintId}`, {
+      const response = await fetch(`https://hostel-hub.vercel.app/complaints/${complaintId}`, {
         method: 'DELETE'
       });
 
