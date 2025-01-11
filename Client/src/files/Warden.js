@@ -11,7 +11,7 @@ const Warden = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch('http://localhost:5000/warden', {
+      const response = await fetch('https://hostel-hub.vercel.app/warden', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
