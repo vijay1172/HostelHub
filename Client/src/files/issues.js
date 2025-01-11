@@ -7,7 +7,7 @@ const Issues = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:5000/complaints')
+    fetch('https://hostel-hub.vercel.app/complaints')
       .then(response => response.json())
       .then(data => {
         console.log('Data received from backend:', data);
