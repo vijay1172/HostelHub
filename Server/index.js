@@ -6,7 +6,19 @@ const app = express();
 const User = require('./models/User');
 const mongoose = require("mongoose");
 
-app.use(cors());
+const allowedOrigins = ['http://localhost:3000', 'https://your-production-domain.com']; // Add your allowed origins here
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true // Allow cookies and credentials
+}));
 app.use(express.json());
 console.log(process.env.DB_URL)
 
