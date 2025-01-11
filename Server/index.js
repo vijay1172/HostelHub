@@ -6,7 +6,7 @@ const app = express();
 const User = require('./models/User');
 const mongoose = require("mongoose");
 
-const allowedOrigins = ['http://localhost:3000', 'https://hostel-hub.vercel.app']; // Add your allowed origins here
+const allowedOrigins = ['http://localhost:3000', 'https://hostel-hub.vercel.app','hostel-hub-28cz.vercel.app']; // Add your allowed origins here
 
 app.use(cors({
   origin: (origin, callback) => {
