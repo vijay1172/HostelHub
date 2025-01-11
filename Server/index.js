@@ -23,7 +23,7 @@ app.use(cors({
   },
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  credentials: false,
 }));
 
 // Handle preflight OPTIONS request explicitly
@@ -37,7 +37,7 @@ app.options('*', cors({
   },
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  credentials: false,
 }));
 
 app.use(express.json());
