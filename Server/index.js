@@ -6,8 +6,9 @@ const app = express();
 const User = require('./models/User');
 const mongoose = require("mongoose");
 
-const allowedOrigins = ['http://localhost:3000', 'https://hostel-hub.vercel.app','https://hostel-hub-28cz.vercel.app']; // Add your allowed origins here
+const allowedOrigins = ['http://localhost:3000', 'https://hostel-hub.vercel.app', 'https://hostel-hub-28cz.vercel.app']; 
 
+// CORS configuration
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
@@ -16,21 +17,23 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     res.setHeader('Access-Control-Allow-Credentials', 'true');
   }
+  
   if (req.method === 'OPTIONS') {
-    res.sendStatus(204); // No Content
-  } else {
-    next();
+    return res.sendStatus(204);
   }
+  next();
 });
-app.use(express.json());
-console.log(process.env.DB_URL)
 
-const mongoURI =process.env.DB_URL;
+app.use(express.json());
+console.log(process.env.DB_URL);
+
+const mongoURI = process.env.DB_URL;
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("MongoDB Connection Error:", err));
 
+// Warden login route
 app.post("/warden", async (req, res) => {
   const { username, password } = req.body;
   try {
@@ -47,10 +50,11 @@ app.post("/warden", async (req, res) => {
   }
 });
 
+// Complaint submission route
 app.post("/complaints", async (req, res) => {
   try {
     const { rollNumber, roomNumber, name } = req.body;
-    const client = new MongoClient(mongoURI,{ useNewUrlParser:true, useUnifiedTopology:true });
+    const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
     await client.connect();
     const existingStudentsCollection = client.db("complaints").collection("existingstudents");
     const student = await existingStudentsCollection.findOne({ 
@@ -74,6 +78,7 @@ app.post("/complaints", async (req, res) => {
   }
 });
 
+// Get all complaints route
 app.get("/complaints", async (req, res) => {
   try {
     const complaints = await User.find({});
@@ -83,15 +88,17 @@ app.get("/complaints", async (req, res) => {
   }
 });
 
+// Get all issues route
 app.get("/issues", async (req, res) => {
-    try {
-      const complaints = await User.find({});
-      res.status(200).json(complaints);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
-  });
+  try {
+    const complaints = await User.find({});
+    res.status(200).json(complaints);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
+// Delete complaint route
 app.delete("/complaints/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -106,7 +113,7 @@ app.delete("/complaints/:id", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
