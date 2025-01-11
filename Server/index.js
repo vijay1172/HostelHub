@@ -9,7 +9,8 @@ const mongoose = require("mongoose");
 const allowedOrigins = [
   'http://localhost:3000',
   'https://hostel-hub.vercel.app',
-  'https://hostel-hub-28cz.vercel.app'
+  'https://hostel-hub-28cz.vercel.app',
+  'https://hostel-hub-28cz-fi2fg9j4l-vijay1172s-projects.vercel.app'
 ];
 
 // CORS configuration
