@@ -6,29 +6,27 @@ const app = express();
 const User = require('./models/User');
 const mongoose = require("mongoose");
 
-const allowedOrigins = ['http://localhost:3000', 'https://hostel-hub.vercel.app', 'https://hostel-hub-28cz.vercel.app']; 
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://hostel-hub.vercel.app',
+  'https://hostel-hub-28cz.vercel.app'
+];
 
 // CORS configuration
-// app.use((req, res, next) => {
-//   const origin = req.headers.origin;
-//   if (allowedOrigins.includes(origin)) {
-//     res.setHeader('Access-Control-Allow-Origin', origin);
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-//     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//     res.setHeader('Access-Control-Allow-Credentials', 'true');
-//   }
-  
-//   if (req.method === 'OPTIONS') {
-//     return res.sendStatus(204);
-//   }
-//   next();
-// });
 app.use(cors({
-  origin: allowedOrigins,
-  methods: ["POST", "GET", "DELETE", "PUT"],  // Allowing POST, GET, DELETE, PUT methods
-  credentials: true  // Allowing credentials (cookies, etc.)
+  origin: allowedOrigins,  // Allow only specific origins
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],  // Allow specific HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'],  // Allow specific headers
+  credentials: true  // Allow credentials (cookies, etc.)
 }));
 
+// Handle preflight OPTIONS request explicitly
+app.options('*', cors({
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
 app.use(express.json());
 console.log(process.env.DB_URL);
